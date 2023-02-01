@@ -121,7 +121,7 @@ void *mm_realloc(void *ptr, size_t size, struct memory_manager *mem_manager,
  * Macro mm_realloc that automatically adds file, func, and line parameters.
  * </p>
  */
-#define Mmm_realloc(size, mm) \
-    mm_realloc(size, mm, __FILE__, __func__, __LINE__)
+#define Mmm_realloc(ptr, size, mm) \
+    mm_realloc(ptr, size, mm, __FILE__, __func__, __LINE__)
 
 #endif //MEMORY_MANAGER_MANAGER_H
