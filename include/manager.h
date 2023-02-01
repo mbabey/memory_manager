@@ -97,4 +97,31 @@ void *mm_calloc(size_t count, size_t size, struct memory_manager *mem_manager,
 void *mm_realloc(void *ptr, size_t size, struct memory_manager *mem_manager,
                  const char *file, const char *func, size_t line);
 
+/**
+ * Mmm_malloc
+ * <p>
+ * Macro mm_malloc that automatically adds file, func, and line parameters.
+ * </p>
+ */
+#define Mmm_malloc(size, mm) \
+    mm_malloc(size, mm, __FILE__, __func__, __LINE__)
+
+/**
+ * Mmm_malloc
+ * <p>
+ * Macro mm_calloc that automatically adds file, func, and line parameters.
+ * </p>
+ */
+#define Mmm_calloc(count, size, mm) \
+    mm_calloc(count, size, mm, __FILE__, __func__, __LINE__)
+
+/**
+ * Mmm_malloc
+ * <p>
+ * Macro mm_realloc that automatically adds file, func, and line parameters.
+ * </p>
+ */
+#define Mmm_realloc(size, mm) \
+    mm_realloc(size, mm, __FILE__, __func__, __LINE__)
+
 #endif //MEMORY_MANAGER_MANAGER_H
