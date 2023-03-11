@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 
 project(mem_manager
-        VERSION 0.1.2
+        VERSION 0.2.0
         DESCRIPTION ""
         LANGUAGES C)
 
